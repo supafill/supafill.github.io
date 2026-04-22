@@ -3,6 +3,25 @@ permalink: /changelog/
 title: Changelog
 ---
 
+## [1.4.3] - 2026-04-20
+
+### Changed
+- Japanese, Chinese (Simplified), and Korean name data now uses 3+ character entries across firstNames and lastNames. Previous single- and two-character entries tripped common min-length validators (`minlength="3"`). Japanese uses authentic 3-character first names (e.g., 健太郎, 美智子) and surnames (佐々木, 長谷川). Chinese and Korean surnames are stylized with compound-surname roots (欧阳/司马; 남궁/황보) plus suffix characters to reach the 3-character floor, since native surnames are naturally 1–2 characters
+- City entries for the same locales also normalized to 3+ characters (e.g., `堺` → `名古屋` bench for JP; `北京` → `北京市` for CN; `서울` → `서울특별시` for KR)
+
+## [1.4.2] - 2026-04-20
+
+### Fixed
+- "Fill this form" right-click action now correctly fills the entire form section (e.g., the whole Booker section), not just the focused field, on sites that use `<div class="section-card">` / custom layouts instead of `<form>` wrappers
+- Container detection now walks up the DOM looking for: `<form>` → dialog/modal → section-like ancestor (has a direct heading tag or a `section`/`card`/`panel`/`fieldset`/`form-group` class) → nearest ancestor with multiple fields
+
+## [1.4.1] - 2026-04-20
+
+### Fixed
+- Phone / numeric fields with digits-only validators (e.g., `type="tel"` with custom "only numbers" rule) no longer receive dashes or spaces — generated values are stripped to digits before fill
+- Long generated values (names, addresses) are now truncated to respect the field's `maxlength` attribute instead of being rejected by length validators
+- Applies to inputs with `type="number"`, `type="tel"`, `inputmode="numeric"`, `inputmode="decimal"`, or digits-only `pattern`
+
 ## [1.4.0] - 2026-04-20
 
 ### Added
