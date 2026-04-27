@@ -22,13 +22,13 @@ The core form-filling functionality of SupaFill operates entirely locally in you
 
 ### Local settings storage
 
-SupaFill stores the following **only in your browser** using Chrome's `storage.sync` API:
+SupaFill stores the following **only in your browser** using the browser's `storage.sync` API:
 
 - Locale preference
 - Custom field rules
 - Ignored-field patterns
 
-These settings sync across your browsers if you're signed into Chrome, but are never sent to SupaFill's developers.
+These settings sync across your browsers if you're signed into your browser account (Chrome, Firefox, etc.), but are never sent to SupaFill's developers.
 
 ## Optional Feedback Feature (v1.4.0+)
 
@@ -76,7 +76,7 @@ We may update this privacy policy from time to time. Any changes will be reflect
 
 ## Contact
 
-If you have questions about this privacy policy, please contact us through the Chrome Web Store support page or by using the Feedback form within the extension.
+If you have questions about this privacy policy, please contact us through the extension's store listing support page or by using the Feedback form within the extension.
 
 ---
 
