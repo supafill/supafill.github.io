@@ -1,0 +1,6 @@
+*.*
+!assets/*.png
+!.gitignore
+!index.html
+!changelog.md
+!privacy-policy.md
